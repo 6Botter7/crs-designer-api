@@ -1,7 +1,7 @@
 export class LabelCounter extends HTMLElement{
     async connectedCallback(){
         this.innerHTML = await fetch(import.meta.url.replace(".js", ".html")).then(result => result.text());
-        this.counter = 0;
+        this.counter = 1;
 
         requestAnimationFrame(() => {
             this.querySelector("[data-id='label']").textContent = this.dataset.label;

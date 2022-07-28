@@ -4,7 +4,6 @@ export class CssGridEditor extends HTMLElement {
     async connectedCallback() {
         this.innerHTML = await fetch(import.meta.url.replace(".js", ".html")).then(result => result.text());
         
-        
         requestAnimationFrame(() => {          
             this.clickedHandler = this.clicked.bind(this);
             this.querySelector('[data-id="top-toolbar"]').addEventListener("click", this.clickedHandler);
