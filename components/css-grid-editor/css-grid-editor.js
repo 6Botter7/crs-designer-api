@@ -1,4 +1,5 @@
-import "./../../components/label-counter/label-counter.js"
+import "./../../components/label-counter/label-counter.js";
+import "./../../components/grid-preview/grid-preview.js";
 
 export class CssGridEditor extends HTMLElement {
     async connectedCallback() {
